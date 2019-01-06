@@ -1,0 +1,39 @@
+﻿@model List<_4_FirstApplication.Models.Customer>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Customer</h2>
+@{
+    if (Model.Count <= 0)
+    {
+        <p>We don't have customer</p>
+    }
+    else
+    {
+        <table class="table table-bordered table-hover">
+            <tr>
+                <th>Customer</th>
+                <th>Membership Type</th>
+            </tr>
+            @foreach (var customer in Model)
+            {
+                <tr>
+                    @*<td><a href="@Url.Action("Details", "Customer",new {id=item.Id})">@item.Name</a></td>*@
+                    
+                    <td>
+                        @Html.ActionLink(customer.Name, "Edit", "Customer", new { id = customer.Id }, null)
+                    </td>
+                    <td>@customer.MembershipType.Name</td>
+                </tr>
+            }
+        </table>
+    }
+}
+
+
+
+
+
+
