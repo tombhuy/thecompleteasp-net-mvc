@@ -45,10 +45,17 @@ namespace _4_FirstApplication.Controllers
             return View(randomMovieViewModel);
         }
 
+
+
         public ActionResult Index()
         {
-            return View();
+            if (User.IsInRole(RoleName.CanManageMovies))
+                return View("List");
+
+
+            return View("ReadOnlyList");
         }
+
 
         public ActionResult Details(int id)
         {
@@ -60,7 +67,7 @@ namespace _4_FirstApplication.Controllers
 
 
 
-
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public ActionResult New()
         {
             ViewBag.Title = "New Movie";
