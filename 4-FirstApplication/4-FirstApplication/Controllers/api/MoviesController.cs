@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using  System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -21,7 +22,7 @@ namespace _4_FirstApplication.Controllers.api
 
         public IHttpActionResult GetMovies()
         {
-            var movieDtos= _context.Movies.ToList().Select(Mapper.Map<Movie, MovieDto>);
+            var movieDtos= _context.Movies.Include(m => m.Genre).ToList().Select(Mapper.Map<Movie, MovieDto>);
             return Ok(movieDtos);
         }
 
