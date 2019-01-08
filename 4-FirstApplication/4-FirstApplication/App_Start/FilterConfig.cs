@@ -9,6 +9,7 @@ namespace _4_FirstApplication
         {
             filters.Add(new HandleErrorAttribute());
             filters.Add(new AuthorizeAttribute());
+            filters.Add(new RequireHttpsAttribute());
         }
     }
 }
