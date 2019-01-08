@@ -16,7 +16,7 @@ namespace _4_FirstApplication.Controllers
     [Authorize]
     public class AccountController : Controller
     {
-        //Banhda@123
+        // 
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
@@ -158,7 +158,8 @@ namespace _4_FirstApplication.Controllers
                 {
                     UserName = model.Email,
                     Email = model.Email,
-                    DrivingLicense = model.DrivingLicense
+                    DrivingLicense = model.DrivingLicense,
+                    Phone = model.Phone
                 };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
@@ -388,7 +389,9 @@ namespace _4_FirstApplication.Controllers
                 {
                     UserName = model.Email,
                     Email = model.Email,
-                    DrivingLicense = model.DrivingLicense
+                    DrivingLicense = model.DrivingLicense,
+                    Phone = model.Phone
+
                 };
                 var result = await UserManager.CreateAsync(user);
                 if (result.Succeeded)

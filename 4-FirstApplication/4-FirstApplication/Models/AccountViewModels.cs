@@ -12,7 +12,12 @@ namespace _4_FirstApplication.Models
         [Required]
         [Display(Name = "Driving License")]
         public string DrivingLicense { get; set; }
+
+        [Required]
+        [Display(Name = "Phone")]
+        public string Phone { get; set; }
     }
+
 
     public class ExternalLoginListViewModel
     {
@@ -87,7 +92,12 @@ namespace _4_FirstApplication.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
-    }
+
+        [Required]
+        [Display(Name = "Phone")]
+        public string Phone { get; set; }
+
+}
 
     public class ResetPasswordViewModel
     {
@@ -117,4 +127,5 @@ namespace _4_FirstApplication.Models
         [Display(Name = "Email")]
         public string Email { get; set; }
     }
+
 }

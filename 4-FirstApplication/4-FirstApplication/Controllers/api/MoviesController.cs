@@ -11,6 +11,7 @@ using _4_FirstApplication.Models;
 
 namespace _4_FirstApplication.Controllers.api
 {
+    [Authorize(Roles = RoleName.CanManageMovies)]
     public class MoviesController : ApiController
     {
         private ApplicationDbContext _context;
