@@ -16,7 +16,7 @@ namespace _4_FirstApplication.Controllers
     [Authorize]
     public class AccountController : Controller
     {
-        // 
+        //Banhda@123
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
