@@ -27,6 +27,11 @@ namespace _4_FirstApplication.Models
         [Range(1,20)]
         public int NumberInStock { get; set; }
 
+        [Required]
+        [Range(0, 20)]
+        public int NumberAvailable { get; set; }
+
+
         public Genre Genre { get; set; }
         public byte GenreId { get; set; }
         

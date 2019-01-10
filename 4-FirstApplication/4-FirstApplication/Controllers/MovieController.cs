@@ -121,7 +121,8 @@ namespace _4_FirstApplication.Controllers
                 movieInDb.ReleaseDate = movie.ReleaseDate;
                 movieInDb.GenreId = movie.GenreId;
                 movieInDb.NumberInStock  = movie.NumberInStock;
-               
+                movieInDb.NumberAvailable = movie.NumberAvailable;
+
             }
 
             _context.SaveChanges();
