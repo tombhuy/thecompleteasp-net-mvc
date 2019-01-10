@@ -21,9 +21,19 @@ namespace _4_FirstApplication.Controllers.api
                 _context=new ApplicationDbContext();
         }
 
-        public IHttpActionResult GetMovies()
+        public IHttpActionResult GetMovies(string query=null)
         {
-            var movieDtos= _context.Movies.Include(m => m.Genre).ToList().Select(Mapper.Map<Movie, MovieDto>);
+            var movieQuery = _context.Movies.Include(m => m.Genre);
+
+            if (!String.IsNullOrWhiteSpace(query))
+                movieQuery = movieQuery.Where(m => m.Name.Contains(query) && m.NumberAvailable > 0);
+
+
+            var movieDtos= movieQuery
+                .ToList()
+                .Select(Mapper.Map<Movie, MovieDto>);
+
+
             return Ok(movieDtos);
         }
 
