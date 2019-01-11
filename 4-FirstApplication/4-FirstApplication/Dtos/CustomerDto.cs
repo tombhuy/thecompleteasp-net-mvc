@@ -23,5 +23,7 @@ namespace _4_FirstApplication.Dtos
 
         public MembershipTypeDto MembershipType { get; set; }
 
+        public bool IsDelinquentOnPayment { get; set; }
+
     }
 }

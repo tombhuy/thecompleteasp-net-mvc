@@ -11,9 +11,12 @@ namespace _4_FirstApplication.Controllers
     {
         // GET: RentMovie
 
-        public ActionResult New(RentMovieViewModel rentMovieViewModel)
+        public ActionResult New()
         {
-            return View();
+            // giới hạn số lượng phim
+            int x = 0;
+            ViewBag.LimitRentMovie = Common.CommonConstants.LimitRentalMovie;
+            return View("New");
         }
     }
 }

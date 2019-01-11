@@ -25,5 +25,9 @@ namespace _4_FirstApplication.Models
         [Display(Name = "Membership Type")]
         public byte MembershipTypeId { get; set; }
 
+        //Người dùng chậm thanh toán
+        [Display(Name = "Delinquent On Payment")]
+        public bool IsDelinquentOnPayment { get; set; }
+
     }
 }
