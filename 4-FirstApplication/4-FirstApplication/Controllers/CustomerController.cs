@@ -74,6 +74,7 @@ namespace _4_FirstApplication.Controllers
                 customerInDb.Birthdate = customer.Birthdate;
                 customerInDb.MembershipTypeId = customer.MembershipTypeId;
                 customerInDb.IsSubscribedToNewsLetter = customer.IsSubscribedToNewsLetter;
+                customerInDb.IsDelinquentOnPayment = customer.IsDelinquentOnPayment;
             }
             _context.SaveChanges();
             return RedirectToAction("Index", "Customer");

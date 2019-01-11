@@ -331,6 +331,10 @@
     <Compile Include="Migrations\201901100211012_AddNumberAvailabelToMovie.Designer.cs">
       <DependentUpon>201901100211012_AddNumberAvailabelToMovie.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901110319189_AddDelinquentOnPaymentToCustomer.cs" />
+    <Compile Include="Migrations\201901110319189_AddDelinquentOnPaymentToCustomer.Designer.cs">
+      <DependentUpon>201901110319189_AddDelinquentOnPaymentToCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -683,6 +687,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201901100211012_AddNumberAvailabelToMovie.resx">
       <DependentUpon>201901100211012_AddNumberAvailabelToMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901110319189_AddDelinquentOnPaymentToCustomer.resx">
+      <DependentUpon>201901110319189_AddDelinquentOnPaymentToCustomer.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

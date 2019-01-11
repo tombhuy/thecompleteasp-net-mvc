@@ -49,6 +49,7 @@ namespace _4_FirstApplication.Controllers.api
 
             //-Thầy viết
             var customer = _context.Customers.Single(c => c.Id == newRental.CustomerId);
+            //IsDelinquentOnPayment
 
             var movies = _context.Movies.Where(m => newRental.MovieIds.Contains(m.Id)).ToList();
 
